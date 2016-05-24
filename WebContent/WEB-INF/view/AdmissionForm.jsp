@@ -23,6 +23,7 @@
 		<p>
 			Hobby : <input type="text" name="formHobby" />
 		</p>
+		
 		<input type="submit" value="Submit this form with collections" />
 		
 	</form>

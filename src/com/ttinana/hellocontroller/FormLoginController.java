@@ -21,20 +21,20 @@ import com.ttinana.model.User;
 @Controller
 public class FormLoginController {
 
-	// @RequestMapping(value = "/admissionForm", method = RequestMethod.GET)
-	@RequestMapping("/*")
+	@RequestMapping(value = "/admissionForm", method = RequestMethod.GET)
+	//@RequestMapping("/*")
 	public ModelAndView getAdmissionForm() {
 
 		ModelAndView model = new ModelAndView("AdmissionForm");
 		return model;
-	}
+	}	
 
 	@RequestMapping(value = "submitAdmissionForm", method = RequestMethod.POST)
 	public ModelAndView submitAdmissionForm(
 			@ModelAttribute("myUser") User myUser) {
 		ModelAndView model = new ModelAndView("AdmissionSuccess");
 		model.addObject("msg", "Details submitted by you:: ");
-		model.addObject("myUser", myUser);
+		//model.addObject("myUser", myUser);
 
 		return model;
 	}
@@ -93,7 +93,7 @@ public class FormLoginController {
 	public ModelAndView submitAdmissionForm10(
 			@RequestParam Map<String, String> reqPar) {
 
-		Boolean isEmptyName = reqPar.get("formName").isEmpty();
+		//Boolean isEmptyName = reqPar.get("formName").isEmpty();
 		String name = reqPar.get("formName");
 		String hobby = reqPar.get("formHobby");
 

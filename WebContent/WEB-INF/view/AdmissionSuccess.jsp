@@ -8,6 +8,7 @@
 
 	<h3>${myUser.getFormName()}</h3>
 	<h3>${myUser.getFormHobby()}</h3>
+	
 
 </body>
 </html>
